@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/style.css" rel="stylesheet" />
-    <script src="script.js"></script>
-    <title>Miniprojekt</title>
+    <link href="css/kontakt.css" rel="stylesheet" />
+    <script src="kontakt.js"></script>
+    <title>Wiosna w Poznaniu - Kontakt</title>
   </head>
   <body>
     <div id="container">
@@ -38,28 +38,28 @@
       <main>
         <div>
           <article>
-            <h1>Ciekawe miejsca w Poznaniu</h1>
             <img
-              src="https://unsplash.it/700/300?image=870"
-              alt="imageForArticle"
+              src="https://valuers.pl/wp-content/uploads/2016/12/ikona-szybki-kontakt-mail-RSRM-lublin-01.png"
+              alt="imageForContact"
+              class="kontakt"
             />
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex autem
-              maxime, doloribus nulla voluptatum est, aperiam suscipit nihil,
-              repellat tempora eos tempore rem deleniti a iure voluptates
-              expedita culpa quam? Asperiores tempore quos reprehenderit ullam
-              consequatur impedit eius vel facere fugiat laboriosam nesciunt
-              nostrum eum natus similique voluptas accusantium doloribus nisi,
-              sunt eaque labore. Commodi voluptatum provident doloremque quo
-              aliquid. Facilis, quis blanditiis culpa accusantium placeat id
-              impedit eligendi iusto deserunt nostrum minima! Eum dolorem ab
-              impedit saepe doloremque, deleniti reprehenderit? Facere cumque
-              nesciunt ab maiores ipsum quasi, reiciendis quidem? Quam, corporis
-              voluptatibus maxime molestiae asperiores fugiat odit nemo odio
-              placeat eius veritatis ipsum nobis qui repellendus voluptates
-              architecto accusamus explicabo recusandae reiciendis facilis
-              perferendis tempore ut facere numquam. Repellendus.
-            </p>
+            <h1>Kontakt</h1>
+
+            <h2>Jeśli masz jakieś pytania, napisz do nas!</h2>
+            <h3>W jakiej sprawie chcesz się z nami skontaktować?</h3>
+            <form>
+              <br />
+              <input type="radio" name="purpose" id="iniciative" />
+              <label for="iniciative">Nowa inicjatywa</label><br />
+              <input type="radio" name="purpose" id="feedback" />
+              <label for="feedback">Opinia o naszych działaniach</label><br />
+              <input type="radio" name="purpose" id="collabo" />
+              <label for="collabo">Współpraca z Urzędem Miasta Poznań</label><br />
+              <input type="radio" name="purpose" id="other" />
+              <label for="other">Inne</label><br />
+            </form>
+            <h3>Miejsce na Twoją wiadomość:</h3>
+            <input type="text" class="textbox">
           </article>
           <aside>
             <section class="widget">
