@@ -1,6 +1,8 @@
 /* Stylowanie od ogółu czyli od container */
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap");
+
 
 /* *{
     box-sizing: border-box;
@@ -11,13 +13,13 @@
 body {
   margin: 10px 0;
   font-size: 16px;
-  font-family: "Lato", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 #container {
   border: 2px dashed black;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.877);
-  background-color: lawngreen;
+  background-color: yellow;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -115,7 +117,7 @@ article {
 aside {
   width: 30%;
   padding: 20px;
-  background-color: darkgray;
+  background-color:pink;
   border-left: 3px dotted black;
 }
 
