@@ -62,14 +62,6 @@ nav ul li a:hover {
   display: inline-block;
 }
 
-body {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
-  margin: 10px;
-}
-
 .slider {
   display: flex;
   justify-content: space-around;
