@@ -1,6 +1,8 @@
 /* Stylowanie od ogółu czyli od container */
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap");
+
 
 /* *{
     box-sizing: border-box;
@@ -11,13 +13,13 @@
 body {
   margin: 10px 0;
   font-size: 16px;
-  font-family: "Lato", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 #container {
   border: 2px dashed black;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.877);
-  background-color: lawngreen;
+  background-color: yellow;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -59,12 +61,41 @@ nav ul li a:hover {
 /* Slider */
 
 .slider {
+  display: inline-block;
+}
+
+.slider {
   display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.slider a {
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slider a:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .slider img {
-  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
+
+.slider a::after {
+  content: attr(title);
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+} 
 
 /* Main */
 main {
@@ -86,7 +117,7 @@ article {
 aside {
   width: 30%;
   padding: 20px;
-  background-color: darkgray;
+  background-color:pink;
   border-left: 3px dotted black;
 }
 
