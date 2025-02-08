@@ -1,1 +1,3 @@
-// Empty file
+$(document).ready(function () {
+  $("#myElement").disableSelection();
+});
