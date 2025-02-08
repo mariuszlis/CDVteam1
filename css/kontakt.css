@@ -82,8 +82,15 @@ article {
   padding: 20px;
 }
 .kontakt {
-    display: flex;
-    max-width: 100px;
+  display: inline;
+  max-width: 40px;
+  float: left;
+}
+
+.textbox {
+  min-width: 75%;
+  min-height: 200px;
+  background-color: bisque;
 }
 
 /* Aside */
@@ -149,18 +156,13 @@ footer p {
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
-
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
-  
 }
 
 @media screen and (min-width: 993px) and (max-width: 1199px) {
-
 }
 
 @media screen and (min-width: 1200px) {
-
-  
 }
