@@ -4,9 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap");
 
 /* *{
-    box-sizing: border-box;
-    
-} */
+      box-sizing: border-box;
+      
+  } */
 
 /* Body */
 body {
@@ -54,9 +54,9 @@ nav ul li a {
 }
 
 /* nav ul li a:hover {
-  color: goldenrod;
-  background-color: black;
-} */
+    color: goldenrod;
+    background-color: black;
+  } */
 
 /* Slider */
 
@@ -124,9 +124,9 @@ aside {
 }
 
 /* .ads {
-  width: 200px;
-  background-color: red;
-  /* display: none;} */
+    width: 200px;
+    background-color: red;
+    /* display: none;} */
 
 .ads {
   background-color: darkslateblue;
@@ -184,6 +184,33 @@ footer p {
 }
 
 @media screen and (min-width: 993px) and (max-width: 1199px) {
+  #container {
+    padding: 20px;
+  }
+
+  header {
+    padding: 25px 30px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  article {
+    width: 70%;
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  .slider {
+    gap: 25px;
+  }
+
+  footer {
+    padding: 35px 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
