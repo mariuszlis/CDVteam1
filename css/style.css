@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap");
 
-
 /* *{
     box-sizing: border-box;
     
@@ -19,7 +18,7 @@ body {
 #container {
   border: 2px dashed black;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.877);
-  background-color: yellow;
+  background-color: cornflowerblue;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -32,6 +31,7 @@ img {
 /* Stylowanie menu */
 
 header {
+  background-color: slategray;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,10 +53,10 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li a:hover {
+/* nav ul li a:hover {
   color: goldenrod;
   background-color: black;
-}
+} */
 
 /* Slider */
 
@@ -95,11 +95,12 @@ nav ul li a:hover {
   margin-top: 10px;
   font-size: 18px;
   color: #333;
-} 
+}
 
 /* Main */
 main {
   display: flex;
+  background-color: aliceblue;
 }
 
 main div {
@@ -117,7 +118,7 @@ article {
 aside {
   width: 30%;
   padding: 20px;
-  background-color:pink;
+  background-color: beige;
   border-left: 3px dotted black;
 }
 
@@ -127,7 +128,7 @@ aside {
   /* display: none;} */
 
 .ads {
-  background-color: lightcoral;
+  background-color: darkslateblue;
   width: 200px;
   writing-mode: vertical-rl;
   text-align: center;
@@ -161,7 +162,7 @@ aside {
 
 /* Footer */
 footer {
-  background-color: lightgray;
+  background-color: silver;
   border-top: 1px solid black;
   text-align: center;
   padding: 25px 0;
@@ -176,18 +177,13 @@ footer p {
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
-
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
-  
 }
 
 @media screen and (min-width: 993px) and (max-width: 1199px) {
-
 }
 
 @media screen and (min-width: 1200px) {
-
-  
 }
