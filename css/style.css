@@ -18,7 +18,7 @@ body {
 #container {
   border: 2px dashed black;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.877);
-  background-color: cornflowerblue;
+  background-color: aliceblue;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -71,6 +71,7 @@ nav ul li a {
 }
 
 .slider a {
+  background-color: aquamarine;
   text-decoration: none;
   display: inline-block;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -100,7 +101,7 @@ nav ul li a {
 /* Main */
 main {
   display: flex;
-  background-color: aliceblue;
+  background-color: azure;
 }
 
 main div {
@@ -186,4 +187,32 @@ footer p {
 }
 
 @media screen and (min-width: 1200px) {
+  #container {
+    max-width: 5000px;
+    padding: 20px;
+  }
+
+  header {
+    padding: 30px 40px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  article {
+    width: 75%;
+  }
+
+  aside {
+    width: 25%;
+  }
+
+  .slider {
+    gap: 30px;
+  }
+
+  footer {
+    padding: 40px 0;
+  }
 }
