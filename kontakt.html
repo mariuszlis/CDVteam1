@@ -1,109 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/kontakt.css" rel="stylesheet" />
-    <script src="kontakt.js"></script>
-    <title>Wiosna w Poznaniu - Kontakt</title>
-  </head>
-  <body>
-    <div id="container">
-      <header>
-        <section class="brand">
-          <a href="#">
-            <img src="https://picsum.photos/150/60" alt="mojelogo" />
-          </a>
-        </section>
-        <nav>
-          <!-- emmet ul>li*4>a[href="#"]{Przycisk} -->
-          <ul>
-            <li><a href="index.html">Strona główna</a></li>
-            <li><a href="#">Galeria</a></li>
-            <li><a href="#">Kariera</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </nav>
-      </header>
-      <section class="slider">
-        <img src="https://unsplash.it/1000/300?image=913" alt="slider" />
-        <section class="ads green">
-          <br />
-          <br />
-          <br />
-          <br />
-          MIEJSCE NA TWOJA REKLAME
-        </section>
-      </section>
-      <main>
-        <div>
-          <article>
-            <h1>Kontakt</h1>
-            <img
-              src="https://valuers.pl/wp-content/uploads/2016/12/ikona-szybki-kontakt-mail-RSRM-lublin-01.png"
-              alt="imageForContact"
-              class="kontakt"
-            />
-            <h2>W jakiej sprawie chcesz się z nami skontaktować?</h2>
-            <form>
-              <br />
-              <input type="radio" name="purpose" id="iniciative" />
-              <label for="iniciative">Nowa inicjatywa</label><br />
-              <input type="radio" name="purpose" id="feedback" />
-              <label for="feedback">Opinia o naszych działaniach</label><br />
-              <input type="radio" name="purpose" id="collabo" />
-              <label for="collabo">Współpraca z Urzędem Miasta Poznań</label
-              ><br />
-              <input type="radio" name="purpose" id="other" />
-              <label for="other">Inne</label><br />
-            </form>
-            <h2>Miejsce na Twoją wiadomość:</h2>
-            <input type="text" class="textbox" id="message" value="Napisz
-            tutaj...">
-            <label for="message"></label>
-            <button>Wyślij</button>
-          </article>
-          <aside>
-            <section class="widget">
-              <h3>About author</h3>
-              <img
-                src="https://unsplash.it/100/100?image=1062"
-                alt="authorImage"
-              />
-              <p>
-                Jestem pięknym pieskiem rasy buldog amerykański. Lubię placki i
-                rowery i listonoszy.
-              </p>
-            </section>
-            <section class="links">
-              <h4>Links:</h4>
-              <ul>
-                <li>
-                  <a href="https://www.podyplomowe.it" target="_blank"
-                    >Strona z materialami CDV FD
-                  </a>
-                </li>
-                <li>
-                  <a href="https://jarmark.poznan.pl/pl/" target="_blank"
-                    >Jarmark "Betlejem Poznańskie"</a
-                  >
-                </li>
-                <li><a href="https://onet.pl" target="_blank">Onet</a></li>
-              </ul>
-            </section>
-          </aside>
-        </div>
-        <section class="ads">
-          <br />
-          <br />
-          <br />
-          <br />
-          REKLAMA SPRZEDANA
-        </section>
-      </main>
-      <footer>
-        <p>Copyright &reg; by Students of CDV 2024</p>
-      </footer>
-    </div>
-  </body>
-</html>
+<link rel="stylesheet" href="css/kontakt.css" />
+<div>
+  <article>
+    <h1>Kontakt</h1>
+    <img
+      src="https://valuers.pl/wp-content/uploads/2016/12/ikona-szybki-kontakt-mail-RSRM-lublin-01.png"
+      alt="imageForContact"
+      class="kontakt"
+    />
+    <h2>W jakiej sprawie chcesz się z nami skontaktować?</h2>
+    <form>
+      <br />
+      <input type="checkbox" name="purpose" id="iniciative" />
+      <label for="iniciative">Nowa inicjatywa</label><br />
+      <input type="checkbox" name="purpose" id="feedback" />
+      <label for="feedback">Opinia o naszych działaniach</label>
+      <br />
+      <input type="checkbox" name="purpose" id="collabo" />
+      <label for="collabo">Współpraca z Urzędem Miasta Poznań</label>
+      <br />
+      <input type="checkbox" name="purpose" id="other" />
+      <label for="other">Inne</label><br />
+    </form>
+    <h2>Miejsce na Twoją wiadomość:</h2>
+    <input type="text" class="textbox" id="message" value="Napisz tutaj..." />
+    <label for="message"></label>
+    <button>Wyślij</button>
+  </article>
+</div>
