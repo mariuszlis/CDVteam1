@@ -3,11 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap");
 
-
 /* *{
-    box-sizing: border-box;
-    
-} */
+      box-sizing: border-box;
+      
+  } */
 
 /* Body */
 body {
@@ -19,7 +18,7 @@ body {
 #container {
   border: 2px dashed black;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.877);
-  background-color: yellow;
+  background-color: aliceblue;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -32,6 +31,7 @@ img {
 /* Stylowanie menu */
 
 header {
+  background-color: slategray;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,10 +53,10 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li a:hover {
-  color: goldenrod;
-  background-color: black;
-}
+/* nav ul li a:hover {
+    color: goldenrod;
+    background-color: black;
+  } */
 
 /* Slider */
 
@@ -71,6 +71,7 @@ nav ul li a:hover {
 }
 
 .slider a {
+  background-color: aquamarine;
   text-decoration: none;
   display: inline-block;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -95,11 +96,12 @@ nav ul li a:hover {
   margin-top: 10px;
   font-size: 18px;
   color: #333;
-} 
+}
 
 /* Main */
 main {
   display: flex;
+  background-color: azure;
 }
 
 main div {
@@ -117,17 +119,17 @@ article {
 aside {
   width: 30%;
   padding: 20px;
-  background-color:pink;
+  background-color: beige;
   border-left: 3px dotted black;
 }
 
 /* .ads {
-  width: 200px;
-  background-color: red;
-  /* display: none;} */
+    width: 200px;
+    background-color: red;
+    /* display: none;} */
 
 .ads {
-  background-color: lightcoral;
+  background-color: darkslateblue;
   width: 200px;
   writing-mode: vertical-rl;
   text-align: center;
@@ -161,7 +163,7 @@ aside {
 
 /* Footer */
 footer {
-  background-color: lightgray;
+  background-color: silver;
   border-top: 1px solid black;
   text-align: center;
   padding: 25px 0;
@@ -176,18 +178,68 @@ footer p {
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
-
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
-  
 }
 
 @media screen and (min-width: 993px) and (max-width: 1199px) {
+  #container {
+    padding: 20px;
+  }
 
+  header {
+    padding: 25px 30px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  article {
+    width: 70%;
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  .slider {
+    gap: 25px;
+  }
+
+  footer {
+    padding: 35px 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  #container {
+    max-width: 5000px;
+    padding: 20px;
+  }
 
-  
+  header {
+    padding: 30px 40px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  article {
+    width: 75%;
+  }
+
+  aside {
+    width: 25%;
+  }
+
+  .slider {
+    gap: 30px;
+  }
+
+  footer {
+    padding: 40px 0;
+  }
 }
