@@ -1,29 +1,28 @@
 <link rel="stylesheet" href="css/kontakt.css" />
-<div>
-  <article>
-    <h1>Kontakt</h1>
-    <img
-      src="https://valuers.pl/wp-content/uploads/2016/12/ikona-szybki-kontakt-mail-RSRM-lublin-01.png"
-      alt="imageForContact"
-      class="kontakt"
-    />
-    <h2>W jakiej sprawie chcesz się z nami skontaktować?</h2>
-    <form>
-      <br />
-      <input type="checkbox" name="purpose" id="iniciative" />
-      <label for="iniciative">Nowa inicjatywa</label><br />
-      <input type="checkbox" name="purpose" id="feedback" />
-      <label for="feedback">Opinia o naszych działaniach</label>
-      <br />
-      <input type="checkbox" name="purpose" id="collabo" />
-      <label for="collabo">Współpraca z Urzędem Miasta Poznań</label>
-      <br />
-      <input type="checkbox" name="purpose" id="other" />
-      <label for="other">Inne</label><br />
-    </form>
-    <h2>Miejsce na Twoją wiadomość:</h2>
-    <input type="text" class="textbox" id="message" value="Napisz tutaj..." />
-    <label for="message"></label>
-    <button>Wyślij</button>
-  </article>
-</div>
+<h1>&bull; Kontakt &bull;</h1>
+<img src="assets/contact-us.png" alt="imageForContact" class="img-contact" />
+
+<h4>W jakiej sprawie chcesz się z nami skontaktować?</h4>
+<p>Możesz wybrać więcej niż jedną opcję.</p>
+
+<form>
+  <br />
+  <input type="checkbox" name="purpose" id="iniciative" />
+  <label for="iniciative">Pomysł na nową inicjatywę</label><br />
+  <input type="checkbox" name="purpose" id="feedback" />
+  <label for="feedback">Opinia o naszych działaniach</label>
+  <br />
+  <input type="checkbox" name="purpose" id="collabo" />
+  <label for="collabo">Współpraca z Urzędem Miasta Poznań</label>
+  <br />
+  <input type="checkbox" name="purpose" id="other" />
+  <label for="other">Inne</label><br />
+</form>
+<h4>Miejsce na Twoją wiadomość:</h4>
+<textarea name="message" rows="10" cols="50">Napisz tutaj...</textarea>
+<p>Wpisz swój adres e-mail:</p>
+<input type="text" class="textbox" id="email" value="przyklad@przyklad.pl" />
+<label for="email"></label>
+<br />
+<br />
+<button class="box">Wyślij</button>

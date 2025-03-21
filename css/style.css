@@ -38,6 +38,10 @@ header {
   padding: 20px 15px;
 }
 
+.hamburger {
+  display: none;
+}
+
 nav ul {
   list-style-type: none;
 }
@@ -180,6 +184,70 @@ footer p {
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
+  nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: slategray;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 7%;
+  }
+
+  .hamburger:hover + nav ul,
+  nav ul:hover {
+    display: flex;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+    width: 300px;
+  }
+
+  nav ul li:hover {
+    background-color: rgba(55, 26, 55, 0.538);
+  }
+
+  nav ul li a {
+    color: rgb(241, 210, 241);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  main div {
+    display: flex;
+    flex-direction: column;
+  }
+  aside {
+    order: -1;
+    background: none;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border: none;
+  }
+
+  .widget {
+    margin-bottom: 0;
+  }
+  article {
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+  }
 }
 
 @media screen and (min-width: 993px) and (max-width: 1199px) {
