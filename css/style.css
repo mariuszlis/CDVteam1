@@ -4,9 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap");
 
 /* *{
-    box-sizing: border-box;
-    
-} */
+      box-sizing: border-box;
+      
+  } */
 
 /* Body */
 body {
@@ -18,7 +18,7 @@ body {
 #container {
   border: 2px dashed black;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.877);
-  background-color: cornflowerblue;
+  background-color: aliceblue;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -58,9 +58,9 @@ nav ul li a {
 }
 
 /* nav ul li a:hover {
-  color: goldenrod;
-  background-color: black;
-} */
+    color: goldenrod;
+    background-color: black;
+  } */
 
 /* Slider */
 
@@ -75,6 +75,7 @@ nav ul li a {
 }
 
 .slider a {
+  background-color: aquamarine;
   text-decoration: none;
   display: inline-block;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -104,7 +105,7 @@ nav ul li a {
 /* Main */
 main {
   display: flex;
-  background-color: aliceblue;
+  background-color: azure;
 }
 
 main div {
@@ -127,9 +128,9 @@ aside {
 }
 
 /* .ads {
-  width: 200px;
-  background-color: red;
-  /* display: none;} */
+    width: 200px;
+    background-color: red;
+    /* display: none;} */
 
 .ads {
   background-color: darkslateblue;
@@ -178,6 +179,73 @@ footer p {
 }
 
 @media screen and (max-width: 576px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  #container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-align: justify;
+    width: 100%;
+  }
+
+  main > div {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    padding: 0%;
+  }
+
+  article {
+    order: 1;
+    width: 100%;
+    padding: 10px;
+  }
+
+  aside {
+    order: 2;
+    width: 100%;
+    margin-top: 20px;
+    border-left: none;
+    padding: 10px;
+  }
+
+  .links ul {
+    margin-left: 0;
+    padding-left: 20px;
+  }
+
+  .slider {
+    gap: 10px;
+  }
+  
+  footer {
+    padding: 20px 0;
+  }
+
+  .ads {
+    width: 100%;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    font-size: 15pt;
+    padding: 20px;
+    background-color: darkslateblue;
+    margin-top: 20px;
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
@@ -251,7 +319,62 @@ footer p {
 }
 
 @media screen and (min-width: 993px) and (max-width: 1199px) {
+  #container {
+    padding: 20px;
+  }
+
+  header {
+    padding: 25px 30px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  article {
+    width: 70%;
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  .slider {
+    gap: 25px;
+  }
+
+  footer {
+    padding: 35px 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  #container {
+    max-width: 5000px;
+    padding: 20px;
+  }
+
+  header {
+    padding: 30px 40px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  article {
+    width: 75%;
+  }
+
+  aside {
+    width: 25%;
+  }
+
+  .slider {
+    gap: 30px;
+  }
+
+  footer {
+    padding: 40px 0;
+  }
 }
