@@ -1,4 +1,8 @@
-.kontakt {
-    float: left;
-    max-width: 75px;
+h1 {
+  text-align: center;
+}
+
+img {
+  float: left;
+  padding-right: 15px;
 }
