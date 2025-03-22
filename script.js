@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector("nav ul");
+
+  function toggleMenu(event) {
+    event.stopPropagation();
+    navMenu.classList.toggle("active");
+  }
+
+  function closeMenu(event) {
+    if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
+      navMenu.classList.remove("active");
+    }
+  }
+
+  hamburger.addEventListener("click", toggleMenu);
+
+  document.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const subpageHome = document.getElementById("subpage-home");
   const subpageContact = document.getElementById("subpage-contact");
   const mainContent = document.getElementById("main-content");
