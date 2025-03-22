@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="css/kontakt.css" />
+
 <h1>&bull; Kontakt &bull;</h1>
+
 <img src="assets/contact-us.png" alt="imageForContact" class="img-contact" />
 
 <h4>W jakiej sprawie chcesz się z nami skontaktować?</h4>
@@ -19,10 +21,20 @@
   <label for="other">Inne</label><br />
 </form>
 <h4>Miejsce na Twoją wiadomość:</h4>
-<textarea name="message" rows="10" cols="50">Napisz tutaj...</textarea>
+<textarea
+  name="message"
+  rows="10"
+  cols="50"
+  placeholder="Napisz tutaj..."
+></textarea>
 <p>Wpisz swój adres e-mail:</p>
-<input type="text" class="textbox" id="email" value="przyklad@przyklad.pl" />
+<input
+  type="text"
+  class="textbox"
+  id="email"
+  placeholder="przyklad@przyklad.pl"
+/>
 <label for="email"></label>
 <br />
 <br />
-<button class="box">Wyślij</button>
+<button id="send-btn" class="btn"><span>Wyślij</span></button>
