@@ -265,9 +265,14 @@ footer p {
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
+  body {
+    padding: 10px;
+  }
+
   nav ul {
     list-style: none;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -276,11 +281,12 @@ footer p {
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 7%;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 
-  .hamburger:hover + nav ul,
-  nav ul:hover {
-    display: flex;
+  nav ul.active {
+    visibility: visible;
+    opacity: 1;
     z-index: 1000;
   }
 
@@ -288,10 +294,12 @@ footer p {
     display: block;
     margin: 10px 0;
     width: 300px;
+   
   }
-
-  nav ul li:hover {
-    border: solid 1px rgb(241, 210, 241);
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
   }
 
   nav ul li a {
