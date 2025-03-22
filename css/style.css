@@ -261,29 +261,6 @@ footer p {
   }
 }
 
-@media screen and (min-width: 577px) and (max-width: 768px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .container {
-    width: 100%;
-    padding: 5px;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .image {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
 @media screen and (min-width: 769px) and (max-width: 992px) {
   nav ul {
     list-style: none;
@@ -409,5 +386,28 @@ footer p {
 
   footer {
     padding: 40px 0;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image {
+    max-width: 100%;
+    height: auto;
   }
 }
