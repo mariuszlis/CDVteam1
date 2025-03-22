@@ -4,9 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap");
 
 /* *{
-    box-sizing: border-box;
-    
-} */
+      box-sizing: border-box;
+      
+  } */
 
 /* Body */
 body {
@@ -16,9 +16,9 @@ body {
 }
 
 #container {
-  border: 2px dashed black;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.877);
-  background-color: cornflowerblue;
+  /* border: 2px dashed black;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.877); */
+  background-color: aliceblue;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -31,11 +31,16 @@ img {
 /* Stylowanie menu */
 
 header {
-  background-color: slategray;
+  background-color: rgba(0, 161, 48, 0.403);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 15px;
+  border-radius: 20px;
+}
+
+.hamburger {
+  display: none;
 }
 
 nav ul {
@@ -53,54 +58,65 @@ nav ul li a {
   text-decoration: none;
 }
 
-/* nav ul li a:hover {
-  color: goldenrod;
-  background-color: black;
-} */
+nav ul li a:hover {
+  color: rgba(255, 202, 70, 0.733);
+  background-color: rgba(3, 93, 45, 0.739);
+  border-radius: 20px;
+}
 
 /* Slider */
 
 .slider {
-  display: inline-block;
-}
-
-.slider {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.slider a {
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.slider a:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.slider img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.slider a::after {
-  content: attr(title);
-  display: block;
-  text-align: center;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   margin-top: 10px;
-  font-size: 18px;
-  color: #333;
+  margin-bottom: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: fit-content;
+  max-height: 360px;
+  object-fit: cover;
+  display: block;
+}
+.slide-text {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.706);
+  color: white;
+  padding: 0.5vw 1.5vw;
+  border-radius: 10px;
+  font-size: 2.5vw;
+  text-align: center;
+  justify-content: center;
+}
+
+.slide-text:hover {
+  background-color: rgba(38, 183, 255, 0.786);
 }
 
 /* Main */
 main {
   display: flex;
-  background-color: aliceblue;
+  background-color: azure;
 }
 
 main div {
@@ -112,20 +128,22 @@ main div {
 article {
   width: 70%;
   padding: 20px;
+  text-align: justify;
+  line-height: 1.5;
 }
 
 /* Aside */
 aside {
   width: 30%;
   padding: 20px;
-  background-color: beige;
+  background-color: rgba(6, 217, 70, 0.266);
   border-left: 3px dotted black;
 }
 
 /* .ads {
-  width: 200px;
-  background-color: red;
-  /* display: none;} */
+    width: 200px;
+    background-color: red;
+    /* display: none;} */
 
 .ads {
   background-color: darkslateblue;
@@ -174,6 +192,73 @@ footer p {
 }
 
 @media screen and (max-width: 576px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  #container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-align: justify;
+    width: 100%;
+  }
+
+  main > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0%;
+  }
+
+  article {
+    order: 1;
+    width: 100%;
+    padding: 10px;
+  }
+
+  aside {
+    order: 2;
+    width: 100%;
+    margin-top: 20px;
+    border-left: none;
+    padding: 10px;
+  }
+
+  .links ul {
+    margin-left: 0;
+    padding-left: 20px;
+  }
+
+  .slider {
+    gap: 10px;
+  }
+
+  footer {
+    padding: 20px 0;
+  }
+
+  .ads {
+    width: 100%;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    font-size: 15pt;
+    padding: 20px;
+    background-color: darkslateblue;
+    margin-top: 20px;
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
@@ -200,10 +285,129 @@ footer p {
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
+  nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: slategray;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 7%;
+  }
+
+  .hamburger:hover + nav ul,
+  nav ul:hover {
+    display: flex;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+    width: 300px;
+  }
+
+  nav ul li:hover {
+    background-color: rgba(55, 26, 55, 0.538);
+  }
+
+  nav ul li a {
+    color: rgb(241, 210, 241);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  main div {
+    display: flex;
+    flex-direction: column;
+  }
+  aside {
+    order: -1;
+    background: none;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border: none;
+  }
+
+  .widget {
+    margin-bottom: 0;
+  }
+  article {
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+  }
 }
 
 @media screen and (min-width: 993px) and (max-width: 1199px) {
+  #container {
+    padding: 20px;
+  }
+
+  header {
+    padding: 25px 30px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  article {
+    width: 70%;
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  .slider {
+    gap: 25px;
+  }
+
+  footer {
+    padding: 35px 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  #container {
+    max-width: 5000px;
+    padding: 20px;
+  }
+
+  header {
+    padding: 30px 40px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  article {
+    width: 75%;
+  }
+
+  aside {
+    width: 25%;
+  }
+
+  .slider {
+    gap: 30px;
+  }
+
+  footer {
+    padding: 40px 0;
+  }
 }
