@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "create-react-app": "^5.1.0",
+    "npm-check-updates": "^17.1.16"
+  },
+  "devDependencies": {
+    "cypress": "^14.2.0"
+  }
+}
