@@ -259,12 +259,6 @@ footer p {
     background-color: darkslateblue;
     margin-top: 20px;
   }
-}
-
-@media screen and (min-width: 769px) and (max-width: 992px) {
-  body {
-    padding: 10px;
-  }
 
   nav ul {
     list-style: none;
@@ -274,7 +268,7 @@ footer p {
     position: absolute;
     top: 60px;
     right: 10px;
-    background: darkslateblue;
+    background: rgba(71, 61, 139, 0.831);
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 7%;
@@ -291,12 +285,6 @@ footer p {
     display: block;
     margin: 10px 0;
     width: 300px;
-   
-  }
-  .hamburger {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
   }
 
   nav ul li a {
@@ -304,6 +292,61 @@ footer p {
     text-decoration: none;
     padding: 10px;
     display: block;
+  }
+  nav ul li a:hover {
+    background-color: rgba(241, 210, 241, 0.669);
+    color: darkslateblue;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  body {
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: rgba(71, 61, 139, 0.831);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 7%;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  nav ul.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+    width: 300px;
+  }
+
+  nav ul li a {
+    color: rgb(241, 210, 241);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+  nav ul li a:hover {
+    background-color: rgba(241, 210, 241, 0.669);
+    color: darkslateblue;
   }
 
   .hamburger {
@@ -318,13 +361,16 @@ footer p {
     flex-direction: column;
   }
   aside {
-    order: -1;
+    order: 2;
     background: none;
     width: 90%;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    margin-bottom: 10px;
     border: none;
+    border-radius: 10px;
+    background-color: rgba(6, 217, 70, 0.266);
   }
 
   .widget {
@@ -398,25 +444,69 @@ footer p {
   }
 }
 
-@media screen and (min-width: 577px) and (max-width: 768px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-  }
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
 
-  .container {
-    width: 100%;
-    padding: 5px;
-  }
+#lightbox.show {
+  display: flex;
+}
 
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 90vh;
+}
 
-  .image {
-    max-width: 100%;
-    height: auto;
-  }
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.lightbox-caption {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  max-width: 100%;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  transform: translateY(-50%);
+  user-select: none;
+  z-index: 10001;
+}
+
+.lightbox-arrow.left {
+  left: 1rem;
+}
+
+.lightbox-arrow.right {
+  right: 1rem;
 }
