@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const subpageContact = document.getElementById("subpage-contact");
   const mainContent = document.getElementById("main-content");
   const subpageGallery = document.getElementById("subpage-gallery");
+  const subpageCareer = document.getElementById("subpage-career");
 
   subpageHome.addEventListener("click", function (e) {
     e.preventDefault();
@@ -83,6 +84,21 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     xhrGallery.send();
+  });
+
+  subpageCareer.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let xhrCareer = new XMLHttpRequest();
+
+    xhrCareer.open("GET", "kariera.html", true);
+    xhrCareer.onreadystatechange = function () {
+      if (xhrCareer.readyState === 4 && xhrCareer.status === 200) {
+        mainContent.innerHTML = xhrCareer.responseText;
+      }
+    };
+
+    xhrCareer.send();
   });
 });
 
