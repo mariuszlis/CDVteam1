@@ -259,6 +259,51 @@ footer p {
     background-color: darkslateblue;
     margin-top: 20px;
   }
+
+  nav ul {
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: rgba(71, 61, 139, 0.831);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 7%;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  nav ul.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+    width: 300px;
+  }
+
+  nav ul li a {
+    color: rgb(241, 210, 241);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+  nav ul li a:hover {
+    background-color: rgba(241, 210, 241, 0.669);
+    color: darkslateblue;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    font-size: 30px;
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
@@ -291,12 +336,6 @@ footer p {
     display: block;
     margin: 10px 0;
     width: 300px;
-   
-  }
-  .hamburger {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
   }
 
   nav ul li a {
@@ -305,9 +344,9 @@ footer p {
     padding: 10px;
     display: block;
   }
-  nav ul li a:hover{
-   background-color: rgba(241, 210, 241, 0.669);
-   color: darkslateblue;
+  nav ul li a:hover {
+    background-color: rgba(241, 210, 241, 0.669);
+    color: darkslateblue;
   }
 
   .hamburger {
@@ -470,28 +509,4 @@ footer p {
 
 .lightbox-arrow.right {
   right: 1rem;
-}
-
-
-@media screen and (min-width: 577px) and (max-width: 768px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .container {
-    width: 100%;
-    padding: 5px;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .image {
-    max-width: 100%;
-    height: auto;
-  }
 }
